@@ -10,6 +10,8 @@ type Product = {
   flavor?: string;
   features?: string;
   category?: string;
+  image?: string;
+  imageUrl?: string;
 };
 
 export default function Products() {
@@ -21,118 +23,149 @@ export default function Products() {
         name: "BECOLIFE",
         composition: "Ferric Ammonium Citrate, Cyanocobalamin & Folic Acid Suspension",
         volume: "300 ML",
-        description: "Health supplement for anemia and nutritional deficiency"
+        description: "Health supplement for anemia and nutritional deficiency",
+        image: "🧴",
+        imageUrl: "/images/products/becolife.jpeg"
       },
       {
         name: "COLYDE",
         composition: "Lycopene, Multivitamin, Multimineral & Antioxidant Syrup",
         volume: "200ml",
-        description: "A Complete Health Restorer"
+        description: "A Complete Health Restorer",
+        image: "🧴",
+        imageUrl: "/images/products/colyde.jpeg"
       },
       {
         name: "COLSILIV",
         composition: "Silymarin, L-Ornithine L-Aspartate with Vitamin B-Complex Suspension",
         volume: "200ml",
-        description: "Liver health support syrup"
+        description: "Liver health support syrup",
+        image: "🧴",
+        imageUrl: "/images/products/colsiliv.jpeg"
       },
       {
         name: "RED ME",
         composition: "Ferrous Asparto Glycinate, Vitamin B9 & Cyanocobalamin Suspension",
         volume: "150 ml",
         flavor: "Mango Flavour",
-        description: "Iron and vitamin B complex for anemia"
+        description: "Iron and vitamin B complex for anemia",
+        image: "🥭",
+        imageUrl: "/images/products/redme.jpeg"
       },
       {
         name: "COLZYME-PLUS",
         composition: "Fungal Diastase, Papain with L-Lysine & B-Complex Syrup",
         volume: "200ML",
         features: "Sugar Free",
-        description: "Digestive enzyme syrup with essential vitamins"
+        description: "Digestive enzyme syrup with essential vitamins",
+        image: "🧴",
+        imageUrl: "/images/products/colzyme-plus.jpeg"
       },
       {
         name: "AURBET XT",
         composition: "Ferrous Bisglycinate, Folic Acid and Zinc Suspension",
         volume: "200 ml",
-        description: "Iron, folic acid and zinc supplement"
+        description: "Iron, folic acid and zinc supplement",
+        image: "🧴",
+        imageUrl: "/images/products/aurbet-xt.jpeg"
       },
       {
         name: "GEMS-XP Syrup",
         composition: "Multivitamins, Multiminerals & Antioxidants Syrup",
         volume: "200ml",
         flavor: "Pineapple Flavour",
-        description: "Complete nutritional supplement"
+        description: "Complete nutritional supplement",
+        image: "🍍",
+        imageUrl: "/images/products/gems-xp.jpeg"
       }
     ],
     tablets: [
       {
         name: "Magnesium, Glycine & Vitamin D3",
-        composition: "Magnesium (Magnesium aspartate), Glycine, Vitamin D3 (cholecalciferol) – Animal source Tablet"
+        composition: "Magnesium (Magnesium aspartate), Glycine, Vitamin D3 (cholecalciferol) – Animal source Tablet",
+        image: "💊"
       },
       {
         name: "Nutraceutical Tablet",
-        composition: "Myoinositol, Inositol, Chromium picolinate/nicotinate, Folic Acid, glucosamine salt, Vitamin D3, Selenium, Biotin"
+        composition: "Myoinositol, Inositol, Chromium picolinate/nicotinate, Folic Acid, glucosamine salt, Vitamin D3, Selenium, Biotin",
+        image: "💊"
       },
       {
         name: "Collagen & Hyaluronic Acid",
-        composition: "Collagen and its hydrolysed peptides and chelates, Hyaluronic acid and its salts, Chondroitin sulphate, Vitamin C (Lascorbic acid) Tablet"
+        composition: "Collagen and its hydrolysed peptides and chelates, Hyaluronic acid and its salts, Chondroitin sulphate, Vitamin C (Lascorbic acid) Tablet",
+        image: "💊"
       },
       {
         name: "Calcium & Vitamin D3",
-        composition: "Calcium (Calcium salts of citric acid), Zinc (Zinc sulphate), Vitamin D3 (cholecalciferol) – Animal source Tablet"
+        composition: "Calcium (Calcium salts of citric acid), Zinc (Zinc sulphate), Vitamin D3 (cholecalciferol) – Animal source Tablet",
+        image: "💊"
       }
     ],
     capsules: [
       {
         name: "Antioxidant Capsule",
-        composition: "Glutathione / Sacetyl glutathione, Vitamin C (Lascorbic acid), Grape seed extract, Alpha Lipoic Acid, Vitamin E(Dalphatocopherol), Biotin (D-biotin) Capsuale"
+        composition: "Glutathione / Sacetyl glutathione, Vitamin C (Lascorbic acid), Grape seed extract, Alpha Lipoic Acid, Vitamin E(Dalphatocopherol), Biotin (D-biotin) Capsuale",
+        image: "💊"
       },
       {
         name: "Curcumin Complex",
-        composition: "Curcuminoids – soft extract / powder and curcumin complex, Piper nigrum / Piper longum extract Capsule"
+        composition: "Curcuminoids – soft extract / powder and curcumin complex, Piper nigrum / Piper longum extract Capsule",
+        image: "🌿"
       },
       {
         name: "Probiotic Capsule",
-        composition: "Lactobacillus acidophilus, Lacticaseibacillus rhamnosus, Bifidobacterium bifidum, Bifidobacterium longum Saccharomyces boulardii, Fructooligosaccharides Hard Gelatin Capsule"
+        composition: "Lactobacillus acidophilus, Lacticaseibacillus rhamnosus, Bifidobacterium bifidum, Bifidobacterium longum Saccharomyces boulardii, Fructooligosaccharides Hard Gelatin Capsule",
+        image: "💊"
       }
     ],
     drops: [
       {
         name: "AZKO-ZYME Drops",
         composition: "Alpha Amylase & Papain",
-        description: "Digestive enzyme drops for infants"
+        description: "Digestive enzyme drops for infants",
+        image: "💧",
+        imageUrl: "/images/products/azko-zyme.jpeg"
       },
       {
         name: "WAYVIT Drops",
         composition: "Multivitamin & Multimineral Drops",
-        description: "Essential vitamins and minerals for children"
+        description: "Essential vitamins and minerals for children",
+        image: "💧",
+        imageUrl: "/images/products/wayvit.jpeg"
       },
       {
         name: "Vitamin D3 Drops",
-        composition: "Vitamin D3: 400IU (66.67% RDA), DHA: 50mg DROP"
+        composition: "Vitamin D3: 400IU (66.67% RDA), DHA: 50mg DROP",
+        image: "💧"
       }
     ],
     proteins: [
       {
         name: "High Protein BCAA",
-        composition: "High protein content (68g per serving), BCAAs (essential amino acids), 43 essential nutrients, Vitamins and minerals, Vanilla flavor"
+        composition: "High protein content (68g per serving), BCAAs (essential amino acids), 43 essential nutrients, Vitamins and minerals, Vanilla flavor",
+        image: "🥤"
       },
       {
         name: "Premium Protein",
-        composition: "Trans Fat Free, Cholesterol Free, Gluten Free, Enriched with Saffron protein content"
+        composition: "Trans Fat Free, Cholesterol Free, Gluten Free, Enriched with Saffron protein content",
+        image: "🥤"
       }
     ],
     sachets: [
       {
         name: "Probiotic Sachet - Multi Strain",
-        composition: "Fructooligosaccharides Lactobacillus rhamnosus, Bifidobacterium longum Saccharomyces boulardii, Zinc (Zinc acetate) Sachet"
+        composition: "Fructooligosaccharides Lactobacillus rhamnosus, Bifidobacterium longum Saccharomyces boulardii, Zinc (Zinc acetate) Sachet",
+        image: "📦"
       },
       {
         name: "Collagen Builder",
-        composition: "Ceramides + Collagen Builder contains:- 500mg CollaBZen500mg SesZen-Bio 4% Phyto Ceramides sachet"
+        composition: "Ceramides + Collagen Builder contains:- 500mg CollaBZen500mg SesZen-Bio 4% Phyto Ceramides sachet",
+        image: "📦"
       },
       {
         name: "Energy Boost",
-        composition: "Dextrose: 17.5 gm, Sucrose: 14 gm, Zinc Sulphate: 32.5 mg, Vitamin C (As Electrolyte): 50 mg sachet"
+        composition: "Dextrose: 17.5 gm, Sucrose: 14 gm, Zinc Sulphate: 32.5 mg, Vitamin C (As Electrolyte): 50 mg sachet",
+        image: "⚡"
       }
     ]
   };
@@ -206,19 +239,36 @@ export default function Products() {
             {getFilteredProducts().map((product, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6"
+                className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 p-6 transform hover:-translate-y-2 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
+                {/* Product Image Icon */}
                 <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-xs font-semibold rounded-full mb-3">
-                      {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
-                    </span>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {product.name}
-                    </h3>
+                  <div className="flex items-center space-x-3">
+                    {product.imageUrl ? (
+                      <div className="relative w-20 h-20 rounded-xl overflow-hidden shadow-md transform hover:scale-110 transition-transform bg-gradient-to-br from-blue-100 to-blue-200">
+                        <img 
+                          src={product.imageUrl} 
+                          alt={product.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-4 text-4xl transform hover:scale-110 transition-transform">
+                        {product.image || '💊'}
+                      </div>
+                    )}
+                    <div>
+                      <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-xs font-semibold rounded-full mb-2">
+                        {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
+                      </span>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {product.name}
+                      </h3>
+                    </div>
                   </div>
                   {product.volume && (
-                    <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                       {product.volume}
                     </span>
                   )}

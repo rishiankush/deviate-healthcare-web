@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 
 export default function Home() {
@@ -5,19 +7,39 @@ export default function Home() {
     <div className="min-h-screen pt-20">
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-6">Welcome to Daviate Healthcare</h1>
-            <p className="text-xl mb-8">Leading Third-Party Pharmaceutical Manufacturing Company</p>
-            <p className="text-lg mb-8">We are committed to delivering superior quality pharmaceutical products with WHO-GMP certified manufacturing facilities. Our expertise spans across tablets, capsules, syrups, and more.</p>
-            <div className="flex gap-4">
-              <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                Get Started
-              </Link>
-              <Link href="/about" className="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
-                Learn More
-              </Link>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <h1 className="text-5xl font-bold mb-6">Welcome to Daviate Healthcare</h1>
+              <p className="text-xl mb-4">Leading Third-Party Pharmaceutical Manufacturing Company</p>
+              <p className="text-lg mb-8 text-blue-100">We are committed to delivering superior quality pharmaceutical products with WHO-GMP certified manufacturing facilities. Our expertise spans across tablets, capsules, syrups, and more.</p>
+              <div className="flex gap-4">
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition transform hover:scale-105">
+                  Get Started
+                </Link>
+                <Link href="/about" className="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition transform hover:scale-105">
+                  Learn More
+                </Link>
+              </div>
+            </div>
+            <div className="relative hidden md:block">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-400 to-blue-600">
+                  <img 
+                    src="/images/products/company-building.jpeg" 
+                    alt="Daviate Healthcare Manufacturing Facility"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              {/* Floating badges */}
+              <div className="absolute -top-4 -right-4 bg-white text-blue-600 px-4 py-2 rounded-full font-bold shadow-lg animate-bounce">
+                ISO Certified
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-green-500 text-white px-4 py-2 rounded-full font-bold shadow-lg animate-pulse">
+                WHO-GMP
+              </div>
             </div>
           </div>
         </div>
@@ -27,20 +49,20 @@ export default function Home() {
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
+            <div className="transform hover:scale-110 transition-transform duration-300">
+              <div className="text-4xl font-bold text-blue-600 mb-2 animate-pulse">100+</div>
               <div className="text-gray-600">Formulations</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+            <div className="transform hover:scale-110 transition-transform duration-300">
+              <div className="text-4xl font-bold text-blue-600 mb-2 animate-pulse" style={{ animationDelay: '0.1s' }}>500+</div>
               <div className="text-gray-600">Happy Clients</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
+            <div className="transform hover:scale-110 transition-transform duration-300">
+              <div className="text-4xl font-bold text-blue-600 mb-2 animate-pulse" style={{ animationDelay: '0.2s' }}>15+</div>
               <div className="text-gray-600">Years Experience</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">4</div>
+            <div className="transform hover:scale-110 transition-transform duration-300">
+              <div className="text-4xl font-bold text-blue-600 mb-2 animate-pulse" style={{ animationDelay: '0.3s' }}>4</div>
               <div className="text-gray-600">Certifications</div>
             </div>
           </div>
@@ -173,39 +195,23 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Our Product Range</h2>
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-              <div className="text-blue-600 mb-4">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-              </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">💊</div>
               <h3 className="text-xl font-bold mb-2">Tablets</h3>
               <p className="text-gray-600 text-sm">Wide range of pharmaceutical tablets including antibiotics, analgesics, and more.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-              <div className="text-blue-600 mb-4">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                </svg>
-              </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">💊</div>
               <h3 className="text-xl font-bold mb-2">Capsules</h3>
               <p className="text-gray-600 text-sm">High-quality hard and soft gelatin capsules for various therapeutic categories.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-              <div className="text-blue-600 mb-4">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">🧪</div>
               <h3 className="text-xl font-bold mb-2">Syrups</h3>
               <p className="text-gray-600 text-sm">Pediatric and adult syrups with excellent taste and efficacy.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-              <div className="text-blue-600 mb-4">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                </svg>
-              </div>
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">💉</div>
               <h3 className="text-xl font-bold mb-2">Injectables</h3>
               <p className="text-gray-600 text-sm">Sterile injectables manufactured under stringent quality controls.</p>
             </div>
@@ -218,26 +224,26 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Certifications & Accreditations</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="bg-blue-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center transform hover:scale-110 transition-transform duration-300">
+              <div className="bg-blue-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
                 <span className="text-2xl font-bold text-blue-600">WHO</span>
               </div>
               <p className="font-semibold">WHO-GMP</p>
             </div>
-            <div className="text-center">
-              <div className="bg-blue-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center transform hover:scale-110 transition-transform duration-300">
+              <div className="bg-blue-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 animate-float" style={{ animationDelay: '0.2s' }}>
                 <span className="text-2xl font-bold text-blue-600">ISO</span>
               </div>
               <p className="font-semibold">ISO 9001:2015</p>
             </div>
-            <div className="text-center">
-              <div className="bg-blue-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center transform hover:scale-110 transition-transform duration-300">
+              <div className="bg-blue-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 animate-float" style={{ animationDelay: '0.4s' }}>
                 <span className="text-2xl font-bold text-blue-600">DCGI</span>
               </div>
               <p className="font-semibold">DCGI Approved</p>
             </div>
-            <div className="text-center">
-              <div className="bg-blue-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center transform hover:scale-110 transition-transform duration-300">
+              <div className="bg-blue-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 animate-float" style={{ animationDelay: '0.6s' }}>
                 <span className="text-2xl font-bold text-blue-600">FSSAI</span>
               </div>
               <p className="font-semibold">FSSAI Certified</p>
@@ -249,13 +255,13 @@ export default function Home() {
       {/* CTA Section */}
       <section className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Partner With Us?</h2>
-          <p className="text-xl mb-8">Join hundreds of satisfied clients who trust us for quality pharmaceutical manufacturing</p>
+          <h2 className="text-4xl font-bold mb-4 animate-fade-in">Ready to Partner With Us?</h2>
+          <p className="text-xl mb-8 animate-fade-in">Join hundreds of satisfied clients who trust us for quality pharmaceutical manufacturing</p>
           <div className="flex justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition transform hover:scale-105 shadow-lg hover:shadow-xl">
               Contact Us Today
             </Link>
-            <Link href="/products" className="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+            <Link href="/products" className="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition transform hover:scale-105">
               View Products
             </Link>
           </div>
