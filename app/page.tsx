@@ -27,7 +27,7 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
                 <div className="aspect-[4/3] bg-gradient-to-br from-blue-400 to-blue-600">
                   <img 
-                    src="/images/products/company-building.jpeg" 
+                    src="/images/products/company-building.png" 
                     alt="Daviate Healthcare Manufacturing Facility"
                     className="w-full h-full object-cover"
                   />
