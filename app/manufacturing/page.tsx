@@ -263,34 +263,27 @@ export default function Manufacturing() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Quality Certifications & Compliance
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">ISO</span>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">ISO 9001:2015</h3>
-              <p className="text-sm text-gray-600">Quality Management System Certified</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-600">WHO</span>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-white w-24 h-24 rounded-lg flex items-center justify-center mx-auto mb-4 border border-gray-200 p-3">
+                <img src="/images/certifications/who-gmp.jpg" alt="WHO-GMP Certified" className="w-full h-full object-contain" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">WHO-GMP</h3>
               <p className="text-sm text-gray-600">Good Manufacturing Practice Certified</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-xl font-bold text-orange-600">FSSAI</span>
+            <div className="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-white w-24 h-24 rounded-lg flex items-center justify-center mx-auto mb-4 border border-gray-200 p-3">
+                <img src="/images/certifications/iso-9001.png" alt="ISO 9001:2015" className="w-full h-full object-contain" />
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">ISO 9001:2015</h3>
+              <p className="text-sm text-gray-600">Quality Management System Certified</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-white w-24 h-24 rounded-lg flex items-center justify-center mx-auto mb-4 border border-gray-200 p-3">
+                <img src="/images/certifications/fssai.png" alt="FSSAI Certified" className="w-full h-full object-contain" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">FSSAI Approved</h3>
               <p className="text-sm text-gray-600">Food Safety Standards Authority</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-purple-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">QRO</span>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">QRO Certified</h3>
-              <p className="text-sm text-gray-600">Quality Research Organization</p>
             </div>
           </div>
         </div>

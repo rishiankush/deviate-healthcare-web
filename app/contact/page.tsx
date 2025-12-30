@@ -259,7 +259,7 @@ export default function Contact() {
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">Visit Our Facility</h2>
           <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=Timex+Watches+Baddi,Himachal+Pradesh&zoom=18`}
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3407.5896374947786!2d76.82761297543925!3d30.94138287456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDU2JzI5LjAiTiA3NsKwNDknNDEuMCJF!5e0!3m2!1sen!2sin!4v1735565500000!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0 }}
@@ -269,8 +269,15 @@ export default function Contact() {
               title="Daviate Healthcare Location"
             ></iframe>
           </div>
-          <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
-            Our facility is located at the back side of Timex Watches factory in Baddi, Himachal Pradesh.
+          <p className="text-center text-gray-600 mt-4">
+            <a 
+              href="https://www.google.com/maps?q=30.941382,76.828056" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-orange-600 hover:text-orange-700 font-semibold"
+            >
+              Click here to view on Google Maps →
+            </a>
           </p>
         </div>
       </section>

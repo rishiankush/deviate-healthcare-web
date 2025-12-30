@@ -39,7 +39,7 @@ export default function About() {
                 </div>
                 <div>
                   <p className="font-semibold">Certifications:</p>
-                  <p>ISO 9001:2015, WHO-GMP, FSSAI, QRO</p>
+                  <p>ISO 9001:2015, WHO-GMP, FSSAI</p>
                 </div>
                 <div>
                   <p className="font-semibold">Established:</p>
@@ -85,44 +85,27 @@ export default function About() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Our Certifications & Accreditations
           </h2>
-          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="bg-blue-100 w-32 h-32 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">ISO</div>
-                  <div className="text-sm text-blue-700">9001:2015</div>
-                </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center transform hover:scale-110 transition-transform duration-300">
+              <div className="bg-white w-32 h-32 rounded-lg flex items-center justify-center mx-auto mb-4 shadow-lg border border-gray-200 p-4">
+                <img src="/images/certifications/who-gmp.jpg" alt="WHO-GMP Certified" className="w-full h-full object-contain" />
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">ISO Certified</h3>
-              <p className="text-sm text-gray-600">Quality Management System</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-green-100 w-32 h-32 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">WHO</div>
-                  <div className="text-sm text-green-700">GMP</div>
-                </div>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">WHO-GMP</h3>
+              <h3 className="font-bold text-gray-900 mb-2">WHO-GMP Certified</h3>
               <p className="text-sm text-gray-600">Good Manufacturing Practice</p>
             </div>
-            <div className="text-center">
-              <div className="bg-orange-100 w-32 h-32 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-600">FSSAI</div>
-                </div>
+            <div className="text-center transform hover:scale-110 transition-transform duration-300">
+              <div className="bg-white w-32 h-32 rounded-lg flex items-center justify-center mx-auto mb-4 shadow-lg border border-gray-200 p-4">
+                <img src="/images/certifications/iso-9001.png" alt="ISO 9001:2015" className="w-full h-full object-contain" />
+              </div>
+              <h3 className="font-bold text-gray-900 mb-2">ISO 9001:2015</h3>
+              <p className="text-sm text-gray-600">Quality Management System</p>
+            </div>
+            <div className="text-center transform hover:scale-110 transition-transform duration-300">
+              <div className="bg-white w-32 h-32 rounded-lg flex items-center justify-center mx-auto mb-4 shadow-lg border border-gray-200 p-4">
+                <img src="/images/certifications/fssai.png" alt="FSSAI Certified" className="w-full h-full object-contain" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">FSSAI Approved</h3>
               <p className="text-sm text-gray-600">Food Safety Standards</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-purple-100 w-32 h-32 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600">QRO</div>
-                </div>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Quality Assurance</h3>
-              <p className="text-sm text-gray-600">Quality Research Organization</p>
             </div>
           </div>
         </div>
