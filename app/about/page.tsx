@@ -2,10 +2,10 @@ export default function About() {
   return (
     <div className="pt-20 min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-r from-orange-400 via-orange-500 to-amber-500 text-white py-20">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Daviate Healthcare</h1>
-          <p className="text-xl text-blue-100 max-w-3xl">
+          <p className="text-xl text-orange-50 max-w-3xl">
             Empower Your Health - Leading pharmaceutical manufacturer committed to quality and innovation
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function About() {
               superior quality products that enhance health and wellbeing. Our comprehensive range includes syrups, 
               tablets, capsules, protein powders, sachets, and drops.
             </p>
-            <div className="bg-blue-50 p-6 rounded-lg">
+            <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg border border-orange-100">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Company Details</h3>
               <div className="grid md:grid-cols-2 gap-4 text-gray-700">
                 <div>
@@ -56,9 +56,9 @@ export default function About() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div>
-              <div className="bg-blue-600 text-white p-8 rounded-lg h-full">
-                <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
-                <p className="text-lg text-blue-100">
+              <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-8 rounded-lg h-full shadow-lg">
+                <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+                <p className="text-lg text-orange-50">
                   To empower health by providing innovative, high-quality pharmaceutical and nutraceutical 
                   products that improve the quality of life for people across India and beyond. We strive 
                   to be a trusted partner for healthcare providers and consumers alike.
@@ -215,7 +215,7 @@ export default function About() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Location</h2>
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-lg">
+            <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-8 rounded-lg border border-orange-100">
               <p className="text-lg text-gray-700 mb-4">
                 <strong>Daviate Healthcare</strong>
               </p>
@@ -237,18 +237,18 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Partner With Us Today
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-orange-50 mb-8 max-w-2xl mx-auto">
             Join hundreds of satisfied partners who trust Daviate Healthcare for their 
             pharmaceutical manufacturing needs
           </p>
           <a
             href="/contact"
-            className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all inline-block"
+            className="bg-white text-orange-600 px-8 py-3 rounded-full font-semibold hover:bg-orange-50 transition-all inline-block shadow-lg"
           >
             Contact Us Now
           </a>

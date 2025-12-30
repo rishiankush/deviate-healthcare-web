@@ -12,18 +12,35 @@ export default function Contact() {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    alert("Thank you for your inquiry! We will get back to you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      subject: "",
-      message: ""
-    });
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Thank you for your inquiry! We will get back to you soon.");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        alert("There was an error sending your message. Please try again.");
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert("There was an error sending your message. Please try again.");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -37,7 +54,7 @@ export default function Contact() {
     <div className="min-h-screen pt-20">
 
       {/* Page Header */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-orange-400 via-orange-500 to-amber-500 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl">Get in Touch with Our Team</p>
@@ -63,7 +80,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="Your Name"
                   />
                 </div>
@@ -79,7 +96,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -95,7 +112,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="+91 9876543210"
                   />
                 </div>
@@ -110,7 +127,7 @@ export default function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="Your Company"
                   />
                 </div>
@@ -119,21 +136,16 @@ export default function Contact() {
                   <label htmlFor="subject" className="block text-gray-700 font-semibold mb-2">
                     Subject *
                   </label>
-                  <select
+                  <input
+                    type="text"
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="third-party-manufacturing">Third Party Manufacturing</option>
-                    <option value="product-inquiry">Product Inquiry</option>
-                    <option value="partnership">Partnership Opportunity</option>
-                    <option value="quality-concern">Quality Concern</option>
-                    <option value="other">Other</option>
-                  </select>
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="Subject of your inquiry"
+                  />
                 </div>
 
                 <div>
@@ -147,14 +159,14 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="Tell us about your requirements..."
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition shadow-md"
                 >
                   Submit Inquiry
                 </button>
@@ -177,18 +189,19 @@ export default function Contact() {
                     <div>
                       <h3 className="text-xl font-bold mb-2">Corporate Office</h3>
                       <p className="text-gray-700">
-                        Daviate Healthcare Pvt. Ltd.<br />
-                        Village Nandpur, Industrial Area<br />
-                        Baddi, Solan, Himachal Pradesh<br />
-                        India - 174101
+                        DAVIATE HEALTHCARE<br />
+                        Plot No 11A, Indl Area<br />
+                        Cum Apparel Park, Katha, Baddi<br />
+                        Dist. Solan, (H.P) - 173205<br />
+                        India
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-lg">
+                <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg border border-orange-100">
                   <div className="flex items-start">
-                    <div className="text-blue-600 mr-4">
+                    <div className="text-orange-500 mr-4">
                       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
@@ -196,35 +209,32 @@ export default function Contact() {
                     <div>
                       <h3 className="text-xl font-bold mb-2">Phone</h3>
                       <p className="text-gray-700">
-                        Sales: +91 9876543210<br />
-                        Support: +91 9876543211<br />
-                        Customer Care: +91 9876543212
+                        Sales: +91 9646944045<br />
+                        Sales: +91 9625031133
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-lg">
+                <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg border border-orange-100">
                   <div className="flex items-start">
-                    <div className="text-blue-600 mr-4">
-                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="text-orange-500 mr-4">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2">Email</h3>
                       <p className="text-gray-700">
-                        General Inquiries: info@daviatehealthcare.com<br />
-                        Sales: sales@daviatehealthcare.com<br />
-                        Support: support@daviatehealthcare.com
+                        Sales: daviatehealthcare@gmail.com
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-blue-50 p-6 rounded-lg">
+                <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-6 rounded-lg border border-orange-100">
                   <div className="flex items-start">
-                    <div className="text-blue-600 mr-4">
+                    <div className="text-orange-500 mr-4">
                       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -232,10 +242,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-xl font-bold mb-2">Business Hours</h3>
                       <p className="text-gray-700">
-                        Monday - Friday: 9:00 AM - 6:00 PM<br />
-                        Saturday: 9:00 AM - 2:00 PM<br />
-                        Sunday: Closed<br />
-                        <span className="text-sm text-gray-600">(Customer support available 24/7)</span>
+                        Monday - Saturday: 9:00 AM - 5:00 PM
                       </p>
                     </div>
                   </div>
@@ -246,13 +253,25 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Map Section (Placeholder) */}
+      {/* Map Section */}
       <section className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">Visit Our Facility</h2>
-          <div className="max-w-5xl mx-auto bg-gray-300 h-96 rounded-lg flex items-center justify-center">
-            <p className="text-gray-600">Map Integration (Google Maps embed would go here)</p>
+          <div className="max-w-5xl mx-auto rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=Timex+Watches+Baddi,Himachal+Pradesh&zoom=18`}
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Daviate Healthcare Location"
+            ></iframe>
           </div>
+          <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
+            Our facility is located at the back side of Timex Watches factory in Baddi, Himachal Pradesh.
+          </p>
         </div>
       </section>
     </div>

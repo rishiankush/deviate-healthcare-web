@@ -83,22 +83,22 @@ export default function Products() {
       {
         name: "Magnesium, Glycine & Vitamin D3",
         composition: "Magnesium (Magnesium aspartate), Glycine, Vitamin D3 (cholecalciferol) – Animal source Tablet",
-        image: "💊"
+        image: "⚪"
       },
       {
         name: "Nutraceutical Tablet",
         composition: "Myoinositol, Inositol, Chromium picolinate/nicotinate, Folic Acid, glucosamine salt, Vitamin D3, Selenium, Biotin",
-        image: "💊"
+        image: "⚪"
       },
       {
         name: "Collagen & Hyaluronic Acid",
         composition: "Collagen and its hydrolysed peptides and chelates, Hyaluronic acid and its salts, Chondroitin sulphate, Vitamin C (Lascorbic acid) Tablet",
-        image: "💊"
+        image: "⚪"
       },
       {
         name: "Calcium & Vitamin D3",
         composition: "Calcium (Calcium salts of citric acid), Zinc (Zinc sulphate), Vitamin D3 (cholecalciferol) – Animal source Tablet",
-        image: "💊"
+        image: "⚪"
       }
     ],
     capsules: [
@@ -110,7 +110,7 @@ export default function Products() {
       {
         name: "Curcumin Complex",
         composition: "Curcuminoids – soft extract / powder and curcumin complex, Piper nigrum / Piper longum extract Capsule",
-        image: "🌿"
+        image: "💊"
       },
       {
         name: "Probiotic Capsule",
@@ -195,10 +195,10 @@ export default function Products() {
   return (
     <div className="pt-20 min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-orange-400 via-orange-500 to-amber-500 text-white py-16">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Products</h1>
-          <p className="text-xl text-blue-100">
+          <p className="text-xl text-orange-50">
             Comprehensive range of pharmaceutical and nutraceutical products
           </p>
         </div>
@@ -214,7 +214,7 @@ export default function Products() {
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full whitespace-nowrap transition-all ${
                   activeCategory === category.id
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-md'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -246,7 +246,7 @@ export default function Products() {
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     {product.imageUrl ? (
-                      <div className="relative w-20 h-20 rounded-xl overflow-hidden shadow-md transform hover:scale-110 transition-transform bg-gradient-to-br from-blue-100 to-blue-200">
+                      <div className="relative w-20 h-20 rounded-xl overflow-hidden shadow-md transform hover:scale-110 transition-transform bg-gradient-to-br from-orange-100 to-amber-200">
                         <img 
                           src={product.imageUrl} 
                           alt={product.name}
@@ -254,17 +254,14 @@ export default function Products() {
                         />
                       </div>
                     ) : (
-                      <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-4 text-4xl transform hover:scale-110 transition-transform">
+                      <div className="bg-gradient-to-br from-orange-100 to-peach-200 rounded-xl p-4 text-4xl transform hover:scale-110 transition-transform">
                         {product.image || '💊'}
                       </div>
                     )}
                     <div>
-                      <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-xs font-semibold rounded-full mb-2">
+                      <span className="inline-block px-3 py-1 bg-orange-100 text-orange-600 text-xs font-semibold rounded-full mb-2">
                         {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
                       </span>
-                      <h3 className="text-xl font-bold text-gray-900">
-                        {product.name}
-                      </h3>
                     </div>
                   </div>
                   {product.volume && (
@@ -311,7 +308,7 @@ export default function Products() {
                       </svg>
                       <span>ISO Certified</span>
                     </div>
-                    <a href="/contact" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                    <a href="/contact" className="text-orange-500 hover:text-orange-600 font-semibold text-sm">
                       Inquire Now →
                     </a>
                   </div>
@@ -323,17 +320,17 @@ export default function Products() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Interested in Our Products?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-orange-50 mb-8">
             Contact us for detailed product information, pricing, and partnership opportunities
           </p>
           <a
             href="/contact"
-            className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all inline-block"
+            className="bg-white text-orange-600 px-8 py-3 rounded-full font-semibold hover:bg-orange-50 transition-all inline-block shadow-lg"
           >
             Get in Touch
           </a>

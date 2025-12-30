@@ -2,10 +2,10 @@ export default function Manufacturing() {
   return (
     <div className="pt-20 min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-r from-orange-400 via-orange-500 to-amber-500 text-white py-20">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Third-Party Manufacturing</h1>
-          <p className="text-xl text-blue-100 max-w-3xl">
+          <p className="text-xl text-orange-50 max-w-3xl">
             WHO-GMP certified pharmaceutical manufacturing facility with comprehensive third-party services
           </p>
         </div>
@@ -27,8 +27,8 @@ export default function Manufacturing() {
 
           {/* Manufacturing Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
-              <div className="text-blue-600 text-3xl mb-3">💊</div>
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg">
+              <div className="text-orange-600 text-3xl mb-3">💊</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Syrups & Suspensions</h3>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• 50ml to 300ml bottles</li>
@@ -265,8 +265,8 @@ export default function Manufacturing() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">ISO</span>
+              <div className="bg-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-orange-600">ISO</span>
               </div>
               <h3 className="font-bold text-gray-900 mb-2">ISO 9001:2015</h3>
               <p className="text-sm text-gray-600">Quality Management System Certified</p>
@@ -297,18 +297,18 @@ export default function Manufacturing() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Start Manufacturing?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-orange-50 mb-8 max-w-2xl mx-auto">
             Let&apos;s discuss your manufacturing requirements and how we can help bring your 
             pharmaceutical products to market
           </p>
           <a
             href="/contact"
-            className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-all inline-block"
+            className="bg-white text-orange-600 px-8 py-3 rounded-full font-semibold hover:bg-orange-50 transition-all inline-block shadow-lg"
           >
             Get in Touch
           </a>

@@ -8,30 +8,27 @@ export default function Header() {
 
   return (
     <header className="fixed w-full top-0 z-50 bg-white shadow-md">
-      <nav className="container mx-auto px-6 py-4">
+      <nav className="container mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-3xl font-bold">
-              <span className="text-blue-600">Daviate</span>
-              <span className="text-gray-700"> Healthcare</span>
-            </div>
+          <Link href="/" className="flex items-center py-1">
+            <img src="/logo.png" alt="Daviate Healthcare" className="h-24 w-auto object-contain" />
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
               Home
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/about" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
               About Us
             </Link>
-            <Link href="/products" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/products" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
               Products
             </Link>
-            <Link href="/manufacturing" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/manufacturing" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
               Manufacturing
             </Link>
-            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+            <Link href="/contact" className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full hover:from-orange-600 hover:to-orange-700 transition-all shadow-md">
               Contact Us
             </Link>
           </div>
@@ -55,19 +52,19 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link href="/" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
                 Home
               </Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link href="/about" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
                 About Us
               </Link>
-              <Link href="/products" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link href="/products" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
                 Products
               </Link>
-              <Link href="/manufacturing" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link href="/manufacturing" className="text-gray-700 hover:text-orange-500 transition-colors font-medium">
                 Manufacturing
               </Link>
-              <Link href="/contact" className="text-blue-600 font-medium">
+              <Link href="/contact" className="text-orange-500 font-medium">
                 Contact Us
               </Link>
             </div>
